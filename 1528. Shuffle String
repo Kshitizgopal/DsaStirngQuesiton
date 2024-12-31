@@ -1,0 +1,25 @@
+https://leetcode.com/problems/shuffle-string/description/
+
+class Solution {
+    public String restoreString(String s, int[] indices) {
+    //     StringBuilder str = new StringBuilder();
+
+
+    //     for(int i =0;i < indices.length;i++){
+    //         for(int j =0;j < indices.length;j++){
+    //             if(i == indices[j]){
+    //                 str.append(s.charAt(j));
+    //             }
+    //         }
+    //     }
+    // return str.toString();
+
+    char[] chArr = new char[indices.length];
+
+    for(int i =0;i < indices.length;i++){
+       
+        chArr[indices[i]] = s.charAt(i);
+    }
+    return new String(chArr);
+    }
+}
